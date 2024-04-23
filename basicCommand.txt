@@ -1,33 +1,88 @@
+1>PING
+
+It is one of the basic networking commands to test the connection between the local machine and the host server. 
+This command sends a small amount of data to the host server, and in return, the host server sends a reply to the computer.  
+Information like the IP address of the host server, the amount of data sent, time to live, and time needed for sending and receiving the data are recorded and displayed to the user. 
+ 
 Ping www.google.com
-Ping -a www.google.com
-    resolves the hostname to the respective IP address. 
-Ping -w 20 www.google.com 
-    packaet rejected after 20 miliseconds
-Ipconfig
-ipconfig /a
-    "all" displays the full configuration information
-ipconfig /flushdns
-    clears all the dns look up tables in cache
-ipconfig /registerdns
-    refreshes all dns leases and re-registers dns names in local machine    
-arp -a
-    displays current ARP entries by interrogating the current 
-    protocol data. If inet_addr is specified, the IP and physical addresses for only the 
-    specified computer are displayed.
-netstat
-     displays the connections active on the computer and the ports the 
-    computer is listening to
+
+
+	a) -a
+	The "-a" option resolves the hostname to the respective IP address. 
+
+	Ping -a www.google.com
+
+
+	b) -w
+	The option "-w timeout" sets the timeout, the time after which the data packet will be rejected for each 	ping. The timeout is in milliseconds. 
+	
+	Ping -w 20 www.google.com 
+    
+
+2>IPCONFIG
+This   gives information about the IP address. It not only gives the IP address of the computer it is executed on but also much more information as DNS addresses are stored in the cache. It has options to show even the computer's MAC address, renew the IP address, release the current IP address, flush the DNS cache, and help. 
+
+	ipconfig /a
+	"all" displays the full configuration information
+	
+	ipconfig /flushdns
+	clears all the dns look up tables in cache
+
+	ipconfig /registerdns
+	refreshes all dns leases and re-registers dns names in local machine    
+
+3>ARP
+This command is used to display and modify the IP to the physical address translation table used by the address resolution protocol.  
+It has many options, of which a few are to display current ARP entries, specify an internet address, delete a host in the ARP table, specify a physical address, and many more. 
+
+	a)arp -a
+    	The "-a" command in arp displays current ARP entries by interrogating the current protocol data. If 	inet_addr is specified, the IP and physical addresses for only the specified computer are displayed. 	Displays current ARP entries by interrogating the current protocol data. If inet_addr is specified, the IP 	and physical addresses for only the specified computer are displayed.
+
+4>NETSTAT
+This command displays the connections active on the computer and the ports the computer is listening to. The command displays the four parameters: proto, local address, foreign address, and state. The proto column shows the type of connection, and the local address shows the IP address and the port number of the connection local machine. The proto column also indicates the foreign address, specifies the IP address and port number of the connection in the host server, and the state shows whether the connection is established or not. 
+ 
+5>TRACERT
+The tracert command traces the route from a computer to a host server. It traces the connection for a fixed maximum number of hops. It is one of the basic networking commands. It is used to diagnose path-related problems. The information it displays about the connection route includes the IP addresses for each intermediate server and 3 round trips for each server.  
+Also used to resolve names of intermediate server IP addresses, the maximum number of hops in the path, and the maximum amount of time to wait for a reply. 
+
 tracert www.tsec.edu
-    traces the route from a computer to a host server
-tracert -d www.tsec.edu
-    The "-d" option tells the tracert not no resolve the IP addresses to hostnames. 
-tracert -h 20 www.tsec.edu
-    sets the maximum number of hops for which the 
-    tracert command will trace the connection.
-tracert -w 20 www.tsec.edu
-    sets the timeout time for each reply. 
-nslookup
-    obtains information about domain 
-    names, IP addresses, and other DNS-related data
-hostname
-systeminfo
+	 
+	a)-d
+	The "-d" option tells the tracert not no resolve the IP addresses to hostnames. 
+	tracert -d www.tsec.edu
+	
+	b)h maximum_hops  
+	The "-h maximum_hops" option sets the maximum number of hops for which the tracert command will trace the 	connection	
+	tracert -h 20 www.tsec.edu
+    	sets the maximum number of hops for which the tracert command will trace the connection.
+	
+	c)w timeout 
+	The "-w timeout" option sets the timeout time for each reply. 
+	tracert -w 20 www.tsec.edu
+    	sets the timeout time for each reply. 
+
+5>NSLOOKUP
+The NsLookup command is a command-line utility. It is used in networking to query the Domain Name System (DNS). Then it obtains information about domain names, IP addresses, and other DNS-related data. When you run the NsLookup command followed by a domain name or IP address, it will display the corresponding DNS records associated with that domain or IP. This command is commonly used to troubleshoot DNS-related issues, check DNS resolution, and gather information about domain configurations. 
+ 
+6>HostName 
+The Host Name command is used to display the host name of the computer or device in a network. When you run the Host Name command in a command prompt or terminal, it will return the name assigned to the device on the local network. The host name is a unique identifier used to distinguish devices in a network and is used in various networking protocols and configurations. 
+
+7>SystemInfo 
+The SystemInfo command is used to retrieve detailed information about the hardware and software configuration of a Windows-based computer. When you run the SystemInfo command in a command prompt, it will display a comprehensive report containing information. It will display the operating system version, system manufacturer, processor details, memory size, network adapter details, and more. This command is helpful for system administrators and users to gather system-related information and diagnose issues. 
+ 
+-d 
+The "-d" option tells the tracert not no resolve the IP addresses to hostnames. 
+ 
+-h maximum_hops 
+The "-h maximum_hops" option sets the maximum number of hops for which the tracert command will trace the connection. 
+ 
+-w timeout 
+The "-w timeout" option sets the timeout time for each reply. 
+
+8>Ipconfig 
+As the command name suggests, it gives information about the IP address. It not only gives the IP address of the computer it is executed on but also much more information as DNS addresses are stored in the cache. 
+ 
+/all 
+The "/all" option of the ipconfig command displays the full configuration information. 
+
+
