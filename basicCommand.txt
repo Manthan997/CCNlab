@@ -1,0 +1,33 @@
+Ping www.google.com
+Ping -a www.google.com
+    resolves the hostname to the respective IP address. 
+Ping -w 20 www.google.com 
+    packaet rejected after 20 miliseconds
+Ipconfig
+ipconfig /a
+    "all" displays the full configuration information
+ipconfig /flushdns
+    clears all the dns look up tables in cache
+ipconfig /registerdns
+    refreshes all dns leases and re-registers dns names in local machine    
+arp -a
+    displays current ARP entries by interrogating the current 
+    protocol data. If inet_addr is specified, the IP and physical addresses for only the 
+    specified computer are displayed.
+netstat
+     displays the connections active on the computer and the ports the 
+    computer is listening to
+tracert www.tsec.edu
+    traces the route from a computer to a host server
+tracert -d www.tsec.edu
+    The "-d" option tells the tracert not no resolve the IP addresses to hostnames. 
+tracert -h 20 www.tsec.edu
+    sets the maximum number of hops for which the 
+    tracert command will trace the connection.
+tracert -w 20 www.tsec.edu
+    sets the timeout time for each reply. 
+nslookup
+    obtains information about domain 
+    names, IP addresses, and other DNS-related data
+hostname
+systeminfo
